@@ -33,7 +33,7 @@ function generatePassword() {
 }
 
 //Call the generate password function
-generatePassword();
+//generatePassword();
 
 //Document.write function prints computer's choice onto the webpage
 document.write("The computer Chose " + computerChoice);
@@ -91,7 +91,7 @@ planet.showWarning();
 
 
 // To access an HTML element, JavaScript can use the document.getElementById method
-//The id attribut defines the HTML element.  The innerHTML property defines the HTML content.
+//The id attribute defines the HTML element.  The innerHTML property defines the HTML content.
 
 // To make the outcome random:
 var randomNumber = Math.floor(Math.random() * characters.length);
@@ -104,11 +104,79 @@ var randomNumber = Math.floor(Math.random() * characters.length);
 //Use query Selectors to replace text inside box with the new password
 var generateBtn = document.querySelector("#generate");
 
+var characterAmountRange = document.getElementById ("characterAmountRange");
+varcharacterAmountNumber = document.getElementById ("characterAmountNumber");
+var includeUppercaseElement = document.getElementById ("includesUppercase");
+var includeNumbersElement = document.getElementById ("includesNumbers");
+var includesSymbolsElement = document.getElementById ("includesSymbols");
+var form = document.getElementById("passwordGeneratorForm");
+var passwordDisplay = document.getElementById("passwordDisplay");
 
+//Determines which characters to choose from
+var LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122);
+var SYMBOL_CHAR_CODES = arrayFromLowToHigh(33, 47);
+var UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90);
+var NUMBER_CHAR_CODES = arrayFromLowToHigh(48,57);
+characterAmount = 7;
+
+// Signals to do something when hear submit button
+characterAmountNumber.addEventListener("submit", syncCharacterAmount)
+characterAmountRange.addEventListener("submit", syncCharacterAmount)
+ 
+
+form.addEventListener("submit", e => {
+  e.preventDefault()
+  var characterAmount = characterAmountNumber.value
+  var includeUppercase = includeUppercaseElement.checked
+  var includeNumbers = includeNumbersElement.checked
+  var includeSymbols = includeSymbolsElement.checked
+  var password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
+  passwordDisplay.innertext = password
+})
 
 //Make a password from random variables
-function generatePassword() {
 
+var characterAmountRange = document.getElementById ("characterAmountRange")
+var characterAmountNumber = document.getElementById ("characterAmountNumber")
+var includeUppercaseElement = document.getElementById ("includesUppercase")
+var includeNumbersElement = document.getElementById ("icludesNumbers")
+var includeSymbolsElement = document.getElementById ("includesSymbols")
+var form = document.getElementById("passwordGeneratorForm")
+var passwordDisplay = document.getElementById("passwordDisplay")
+
+// Fucntion to include all check boxes
+function generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols) {
+
+// Function to generate Password
+let characterCodes = LOWERCASE_CHAR_CODES
+if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
+if (includeNumbers) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
+if (includeSymbols) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
+
+//Loop for all difererent Characters
+var passwordCharacter = []
+for (let i=0; i<characterAmount; i ++); {
+  //Gets Random Character From List
+  var charaterCode = chararactercodes[Math.floor(Math.random() * characterAmount)]
+  passwordCharacters.push(String.fromCharacterCode(characterCode))
+}
+return passwordCharacters.join("")
+} 
+
+
+// Function to generate array
+function arrayFromLowToHigh(low, high) {
+  var array = []
+  for(let i=low; i<high; i++) {
+    array.push(i)
+  }
+  return array
+}
+// Function to link slider with input selector arrows
+function syncCharacterAmount() {
+  var value = e.target.value
+  characterAmountNmber.value = value
+  characterAmountRange.value = value
 }
 
 // Write password to the #password input
