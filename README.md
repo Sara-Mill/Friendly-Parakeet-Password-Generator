@@ -2,8 +2,8 @@ This is a code I refactored to make the button respond to user's input of (lengt
 
 Website url=>
 
-![Screenshot of Wepage]
+![Screenshot of Wepage](https://github.com/Sara-Mill/Friendly-Parakeet-Password-Generator/blob/main/Screenshot%20of%20mobile%20version%20of%20webpage.png)
 
 The user interface is responsive and adapts to multiple screen sizes.
 
-Screenshot of mobile version of webpage.png
+![Screenshot of mobile version of webpage.png]()
