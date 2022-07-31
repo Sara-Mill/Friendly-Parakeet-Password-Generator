@@ -6,4 +6,4 @@ Website url=>
 
 The user interface is responsive and adapts to multiple screen sizes.
 
-![Screenshot of mobile version of webpage.png]()
+![Screenshot of mobile version of webpage.png](https://github.com/Sara-Mill/Friendly-Parakeet-Password-Generator/blob/main/Screenshot%20of%20mobile%20version%20of%20webpage.png)
