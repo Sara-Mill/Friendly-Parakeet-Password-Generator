@@ -2,7 +2,7 @@ This is a code I refactored to make the button respond to user's input of (lengt
 
 Website url=>
 
-![Screenshot of Wepage](https://user-images.githubusercontent.com/106774866/180908961-f345da6b-019a-4b35-89a6-9cdd6f05efcb.png)
+![Screenshot of Wepage]
 
 The user interface is responsive and adapts to multiple screen sizes.
 
