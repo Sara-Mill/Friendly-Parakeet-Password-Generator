@@ -32,27 +32,6 @@ generateEl.addEventListener("click", () => {
   length);
 });
 
-// Generate Password click event whether boxes are checked or not
-generateEl.addEventListener('click', () => {
-  var length = +lengthEl.value;
-
-console.log(typeof length);
-
-  var hasLower = lowercaseEl.checked;
-  var hasUpper = uppercaseEl.checked;
-  var hasNumber = numbersEl.checked;
-  var hasSymbol = symbolsEl.checked;
-// Put final password into result box
-passwordEl.innertext = generatePassword
-(hasLower,
-  hasUpper,
-  hasNumber,
-  hasSymbol,
-  length);
-});
-
-
-
 // Generate password function
 function generatePassword(lower, upper, number, symbol, length) {
   // Initiate password variable
@@ -76,6 +55,7 @@ function generatePassword(lower, upper, number, symbol, length) {
     typesArr.forEach(type => {
       var funcName = Object.keys(type)[0];
       //console.log("funcName:", funcName);
+
       // Generates password in console
       generatedPassword += randomFunc[funcName]();
     });
@@ -104,4 +84,4 @@ function getRandomSymbol() {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
-console.log(getRandomSymbol());
+//console.log(getRandomSymbol());
