@@ -1,7 +1,7 @@
 Sara-Mill/Friendly-Parakeet-Password-Generator
 This is a code I refactored to make the button respond to user's input of (length, and whether to use uppercase, lowercase, numbers and/or symbols in order that a random password is generated.
 
-Website url=>
+Website url=>  https://sara-mill.github.io/Friendly-Parakeet-Password-Generator/
 
 ![Screenshot of Wepage](https://github.com/Sara-Mill/Friendly-Parakeet-Password-Generator/blob/feature/create-js-fle/Develop/Screenshot%20of%20webpage.png)
 
