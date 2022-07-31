@@ -1,4 +1,4 @@
-sara_mill.
+Sara-Mill/Friendly-Parakeet-Password-Generator
 This is a code I refactored to make the button respond to user's input of (length, and whether to use uppercase, lowercase, numbers and/or symbols in order that a random password is generated.
 
 Website url=>
