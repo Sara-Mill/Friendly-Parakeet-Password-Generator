@@ -69,7 +69,7 @@ function generatePassword(lower, upper, number, symbol, length) {
 
   // If none are checked, do not create a pw
   if (typesCount === 0) {
-    return "";
+    return "Please select at least one criteria";
   }
   //Loop over length
   for(let i = 0; i< length; i+= typesCount) {
